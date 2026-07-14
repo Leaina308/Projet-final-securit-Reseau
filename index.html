@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet final en securité reseaux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CLIENT-SERVEUR AUTHENTIFICATION -->
+     <div>
+        <section class="view" id="view-p6">
+            <div class="view-head">
+                <div class="eyebrow">Projet final</div>
+                <h1>Authentificaton client - serveur avec TCP</h1>
+                <p class="desc" >Demonstration : connecter-vous, authentifie-vous puis envoie des commandes (date, echo 'Message', help, quit) au serveur.</p>            
+            </div>
+            <div class="grid-wide">
+                <div class="panel" id="p6-login">
+                    <h3>Connexion</h3>
+                    <div class="field"><label>Nom d'utilisateur</label><input id="p6-user" value="admin"></div>
+                    <div class="field"><label>Mot de passe</label><input type="password" id="p6-pass" placeholder="essaie : admin123"></div>
+                    <div class="btn-row"><button class="btn" id="p6-connect">Se connecter</button></div>
+                    <p class="desc" style="margin-top:10px;">Comptes de test : <code>admin/admin123</code>, <code>guest/guest</code>. 3 tentatives max.</p>
+                    <div id="p6-flash"></div>
+                </div>
+                <div class="panel">
+                    <h3>Terminal serveur</h3>
+                    <div class="terminal" id="p6-term"></div>
+                    <div class="prompt-line" style="margin: top 8px;">
+                        <input id="p6-cmd" placeholder="tapez une commande (help)" disabled>
+                    </div>
+                </div>
+            </div>
+        </section>
+     </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
