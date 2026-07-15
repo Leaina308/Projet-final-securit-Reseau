@@ -34,17 +34,17 @@ function log(termId, html){
     if(USERS[u]!==undefined && USERS[u]===p){
       authed=true;
       log('p6-term', `<span class="t-ok">[${nowStr()}] authentification réussie pour ${esc(u)}</span>`);
-      log('p6-term', `<span class="t-muted">bienvenue — tape "help" pour la liste des commandes</span>`);
+      log('p6-term', `<span class="t-muted">Bienvenue — tape "help" pour la liste des commandes</span>`);
       cmdInput.disabled=false; cmdInput.focus();
       flash.innerHTML='<div class="flash ok">Connecté.</div>';
     } else {
       attempts++;
-      log('p6-term', `<span class="t-bad">[${nowStr()}] échec d'authentification pour ${esc(u)} (tentative ${attempts}/3)</span>`);
-      if(attempts>=3){
+      log('p6-term', `<span class="t-bad">[${nowStr()}] échec d'authentification pour ${esc(u)} (tentative ${attempts}/6)</span>`);
+      if(attempts>=6){
         flash.innerHTML='<div class="flash bad">Trop de tentatives — accès bloqué.</div>';
         document.getElementById('p6-connect').disabled=true;
       } else {
-        flash.innerHTML=`<div class="flash bad">Identifiants invalides (${attempts}/3).</div>`;
+        flash.innerHTML=`<div class="flash bad">Identifiants invalides (${attempts}/6).</div>`;
       }
     }
   };

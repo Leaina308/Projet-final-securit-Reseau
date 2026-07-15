@@ -179,7 +179,6 @@ input#p6-cmd::placeholder {
   cursor: not-allowed;
 }
 
-
 .flash {
   margin-top: 14px;
   border-radius: 6px;
@@ -259,7 +258,6 @@ input#p6-cmd::placeholder {
 .prompt-line input:disabled {
   color: var(--text-dim);
 }
-
 
 .terminal::-webkit-scrollbar {
   width: 8px;
